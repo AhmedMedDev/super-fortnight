@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('/admin', function () {
-    return view('admin.products.create');
+    return view('admin.products.index');
 });
 
 Auth::routes();
