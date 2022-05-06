@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     @stack('css')
+    @livewireStyles
 </head>
 
 <body>
@@ -288,5 +289,6 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     @stack('js')
+    @livewireScripts
 </body>
 </html>
