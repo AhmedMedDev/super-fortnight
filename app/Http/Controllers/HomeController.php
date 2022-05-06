@@ -17,6 +17,9 @@ class HomeController extends Controller
     {
         $products = DB::table('product_handler')->get();
 
+        // $products = Cache::rememberForever('products', 
+        // fn () => DB::table('product_handler')->get());
+
         $men_products = [];
         $women_products = [];
 
