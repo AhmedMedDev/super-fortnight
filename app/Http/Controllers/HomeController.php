@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -15,10 +16,8 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $products = DB::table('product_handler')->get();
-
-        // $products = Cache::rememberForever('products', 
-        // fn () => DB::table('product_handler')->get());
+        $products = Cache::rememberForever('products', 
+        fn () => DB::table('product_handler')->get());
 
         $men_products = [];
         $women_products = [];
