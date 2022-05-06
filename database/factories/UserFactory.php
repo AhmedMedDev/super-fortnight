@@ -2,7 +2,9 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
+use App\Models\Category;
 use App\Models\Product;
+use App\Models\Supplier;
 use App\User;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
@@ -39,5 +41,19 @@ $factory->define(Product::class, function (Faker $faker) {
         'price' => $faker->randomFloat,
         'category_id' => $faker->numberBetween(1,10),
         'supplier_id' => $faker->numberBetween(1,10),
+    ];
+});
+
+$factory->define(Category::class, function (Faker $faker) {
+    return [
+        'name' => $faker->name,
+        'sub_categories' => json_encode([$faker->name, $faker->name]),
+    ];
+});
+
+$factory->define(Supplier::class, function (Faker $faker) {
+    return [
+        'name' => $faker->name,
+        'details' => json_encode([$faker->address, $faker->imageUrl(283,241)]),
     ];
 });
