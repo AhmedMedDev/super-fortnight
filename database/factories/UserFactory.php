@@ -2,6 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
+use App\Models\Product;
 use App\User;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
@@ -24,5 +25,19 @@ $factory->define(User::class, function (Faker $faker) {
         'email_verified_at' => now(),
         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         'remember_token' => Str::random(10),
+    ];
+});
+
+
+$factory->define(Product::class, function (Faker $faker) {
+    return [
+        'name' => $faker->name,
+        'des' => $faker->text,
+        'thum' => $faker->imageUrl(283,241),
+        'images' => json_encode([$faker->imageUrl(283,241),$faker->imageUrl(283,241)]),
+        'sku' => $faker->ean8,
+        'price' => $faker->randomFloat,
+        'category_id' => $faker->numberBetween(1,10),
+        'supplier_id' => $faker->numberBetween(1,10),
     ];
 });
