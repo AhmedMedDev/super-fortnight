@@ -95,7 +95,7 @@
                             <li class="cart-icon">
                                 <a href="#">
                                     <i class="icon_bag_alt"></i>
-                                    <span>3</span>
+                                    <span id="cart_counter">{{Gloudemans\Shoppingcart\Facades\Cart::content()->count()}}</span>
                                 </a>
                                 <div class="cart-hover">
                                     <div class="select-items">
