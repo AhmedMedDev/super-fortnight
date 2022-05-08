@@ -1,15 +1,19 @@
 
 
 
-- - integrate main theme
-    - basic auth //
-    - landing page //
-    - login , register //
-    - landing page //
-    - product det //
-    - products // 
-    - cart //
-    - checkout //
-    - new view to show favs
- = 1h
+- - Shopping Cart 
+    - Build Structure
+    - Display Cart Content in cart nav
+    - Display Cart Content in shopping cart
+    - Update Quantity
+    - Remove row
+- - Place Order 
+    - Build Structure
+    - Build Payment Getaway connection 
+    - Start Kit
+        - Hint Take products from cart and store in DB 
+          don't store order befor make sure from payment receiving
+          i think you want search for it 
+          login user or not?? create account of not exit or not ?
+          
 
