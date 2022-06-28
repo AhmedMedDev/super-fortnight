@@ -5,7 +5,7 @@
     <script>
         const add_to_cart = (product_id) => {
             @this.call('add_to_cart', product_id)
-            $('#cart_counter').text(+$('#cart_counter').text() + 1)
+            // $('#cart_counter').text(+$('#cart_counter').text() + 1)
         }
     </script>
 @endpush
