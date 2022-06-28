@@ -17,8 +17,8 @@ class CartBtn extends Component
             $product->id,
             $product->name,
             $quantity,
-            $product->price / 100,
-            220,
+            $product->price,
+            0,
             ['thum' => $product->thum]
         );
 

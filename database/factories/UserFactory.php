@@ -35,10 +35,10 @@ $factory->define(Product::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'des' => $faker->text,
-        'thum' => $faker->imageUrl(283,241),
-        'images' => json_encode([$faker->imageUrl(283,241),$faker->imageUrl(283,241)]),
+        'thum' => "https://via.placeholder.com/300",
+        'images' => json_encode(["https://via.placeholder.com/300","https://via.placeholder.com/300"]),
         'sku' => $faker->ean8,
-        'price' => $faker->randomFloat,
+        'price' => $faker->randomNumber(2),
         'category_id' => $faker->numberBetween(1,10),
         'supplier_id' => $faker->numberBetween(1,10),
     ];

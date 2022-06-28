@@ -96,8 +96,7 @@
                         @foreach ($womens_products as $product)
                             <div class="product-item">
                                 <div class="pi-pic">
-                                    {{-- <img src="{{ $product->thum }}" alt=""> --}}
-                                    <img src="https://dummyimage.com/640x360/fff/aaa" alt="">
+                                    <img src="{{ $product->thum }}" alt="">
                                     <div class="icon">
                                         <i class="icon_heart_alt"></i>
                                     </div>
@@ -179,8 +178,7 @@
                         @foreach ($men_products as $product)
                             <div class="product-item">
                                 <div class="pi-pic">
-                                    {{-- <img src="{{ $product->thum }}" alt=""> --}}
-                                    <img src="https://dummyimage.com/640x360/fff/aaa" alt="">
+                                    <img src="{{ $product->thum }}" alt="">
                                     <div class="icon">
                                         <i class="icon_heart_alt"></i>
                                     </div>
