@@ -25,7 +25,7 @@
                                             <h6>Kabino Bedside Table</h6>
                                         </div>
                                     </td>
-                                    <td class="si-close">
+                                    <td class="si-close" wire:click="remove('{{$item->rowId}}')">
                                         <i class="ti-close"></i>
                                     </td>
                                 </tr>

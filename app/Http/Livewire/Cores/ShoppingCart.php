@@ -8,7 +8,12 @@ use Livewire\Component;
 class ShoppingCart extends Component
 {
     protected $listeners = ['refresh' => '$refresh'];
-    
+
+    public function remove($item_id)
+    {
+        Cart::remove($item_id);
+    }
+
     public function render()
     {
         return view('livewire.cores.shopping-cart',[
