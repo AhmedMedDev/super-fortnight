@@ -17,15 +17,14 @@
                         <tbody>
                             @foreach ($cart_content as $item)
                                 <tr>
-                                    <td class="si-pic"><img src="img/select-product-1.jpg"
-                                            alt=""></td>
+                                    <td class="si-pic"><img src="img/select-product-1.jpg" alt=""></td>
                                     <td class="si-text">
                                         <div class="product-selected">
                                             <p>$ {{$item->price}}</p>
                                             <h6>Kabino Bedside Table</h6>
                                         </div>
                                     </td>
-                                    <td class="si-close" wire:click="remove('{{$item->rowId}}')">
+                                    <td class="si-close" onclick="remove_cart('{{$item->rowId}}')">
                                         <i class="ti-close"></i>
                                     </td>
                                 </tr>
@@ -46,3 +45,10 @@
         <li class="cart-price">$ {{ $cart_total }}</li>
     </ul>
 </div>
+@push('js')
+    <script>
+        const remove_cart = (item_id) => {
+            @this.call('remove', item_id)
+        }
+    </script>
+@endpush
