@@ -47,7 +47,7 @@ $factory->define(Product::class, function (Faker $faker) {
 $factory->define(Category::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
-        'sub_categories' => json_encode([$faker->name, $faker->name]),
+        'subcategories' => json_encode([$faker->name, $faker->name]),
     ];
 });
 
