@@ -22,6 +22,7 @@ class CartBtn extends Component
             ['thum' => $product->thum]
         );
 
+        $this->emit('refresh');
     }
 
     public function render()
