@@ -25,8 +25,8 @@
                                     <td class="p-price first-row">$ {{$item->price}} </td>
                                     <td class="qua-col first-row">
                                         <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="{{$item->qty}}">
+                                            <div wire:ignore class="pro-qty"  onclick="updateQty('{{$item->rowId}}')">
+                                                <input type="text" class="{{$item->rowId}}qty_input" value="{{$item->qty}}">
                                             </div>
                                         </div>
                                     </td>
@@ -66,3 +66,23 @@
         </div>
     </section>
 </div>
+@push('js')
+    <script>
+        let inc;
+
+        $('.qtybtn').on('click', function () {
+            
+            inc = $(this).hasClass('inc') 
+        })
+
+        const updateQty = (item_id) => {
+            let quantity = +$(`.${item_id}qty_input`).val();
+
+            quantity = (inc)
+            ? quantity + 1
+            : quantity - 1
+            
+            @this.call('updateQty', item_id, quantity)
+        }
+    </script>
+@endpush
