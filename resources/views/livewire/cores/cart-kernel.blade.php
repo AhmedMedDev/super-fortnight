@@ -30,7 +30,7 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="total-price first-row">$ {{$item->price}}</td>
+                                    <td class="total-price first-row">$ {{$item->qty * $item->price}}</td>
                                     <td class="close-td first-row" onclick="remove_cart('{{$item->rowId}}')"><i class="ti-close"></i></td>
                                 </tr>
                                 @endforeach
